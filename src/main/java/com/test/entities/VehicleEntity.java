@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "vehicles")
-@Inheritance(strategy = InheritanceType.JOINED) // Each subclass will have its own table
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class VehicleEntity {
 
     @Id
@@ -21,7 +21,6 @@ public abstract class VehicleEntity {
     @Column(nullable = false)
     private int year;
 
-    // Constructors
     public VehicleEntity() {}
 
     public VehicleEntity(String make, String model, int year) {
