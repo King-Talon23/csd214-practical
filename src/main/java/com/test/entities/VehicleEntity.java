@@ -1,7 +1,7 @@
 package com.test.entities;
 
 import jakarta.persistence.*;
-
+import java.util.*;
 
 @Entity
 @Table(name = "vehicles")
@@ -29,6 +29,7 @@ public abstract class VehicleEntity {
         this.year = year;
     }
 
+    public abstract void edit(Scanner input);
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }

@@ -21,7 +21,7 @@ private final Repository<VehicleEntity> vehicleRepository;
 
 
 
-    public CarEntity createBook(String make, String model, int year, int doors) {
+    public CarEntity createCar(String make, String model, int year, int doors) {
         CarEntity newCar = new CarEntity(make, model, year, doors);
         return (CarEntity) vehicleRepository.save(newCar);
     }
